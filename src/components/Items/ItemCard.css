@@ -1,0 +1,202 @@
+/* Import Google Fonts for a modern look */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Apply the imported font to the entire app */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.item-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px; /* Set max width to 400px */
+  margin: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.item-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.item-type {
+  padding: 5px 12px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-body {
+  margin-bottom: 20px;
+}
+
+.card-body p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.icon-button:hover {
+  color: #007bff;
+}
+
+.edit-button:hover {
+  color: #28a745;
+}
+
+.delete-button:hover {
+  color: #dc3545;
+}
+
+/* Conditional background colors for different types */
+.card-sell {
+  background-color: rgba(255, 99, 71, 0.1); /* Light red hue for 'sell' */
+  border-left: 6px solid #ff6f61;
+}
+
+.card-purchase {
+  background-color: rgba(40, 167, 69, 0.1); /* Light green hue for 'purchase' */
+  border-left: 6px solid #28a745;
+}
+
+.card-component {
+  background-color: rgba(
+    23,
+    162,
+    184,
+    0.1
+  ); /* Light blue hue for 'component' */
+  border-left: 6px solid #17a2b8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .item-card {
+    width: 100%;
+    max-width: 90%;
+    margin: 10px auto;
+  }
+
+  .item-name {
+    font-size: 16px;
+  }
+
+  .card-body p {
+    font-size: 12px;
+  }
+
+  .icon-button {
+    font-size: 18px;
+  }
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh; /* Limit the height of the modal */
+  overflow-y: auto; /* Make the modal scrollable if content overflows */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal label {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.modal input,
+.modal select {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-actions .delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.modal-actions button:hover {
+  opacity: 0.8;
+}
